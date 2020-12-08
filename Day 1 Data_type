@@ -1,0 +1,34 @@
+"""The variables i, d, and s have been pre-defined"""
+# Declaring the variables as per the question
+# Note, however, that, in Python a variable is created when you first assign a value to it
+# As such, it is not declared. This is in contrast to languages like C++ which needs
+# declaration with a type
+# Create the variables x, y, and z
+x = 0                         # Variable x is initialised with a type value, int
+y = 0.0                       # Variable y is initialised with a type value, float or double in some programming languages
+z = " "                       # Variable z is initialised with a type value, string
+"""Cast the input values with the preferred type"""
+x = int(input())
+y = float(input())
+z = str(input())
+"""Print the values"""
+print(i + x)
+print(d + y)
+print(s + z)
+
+"""Possible solutions"""
+# Unpack variables directly, and split the values entered
+# Note, however, there are three variables. 
+# As such, the values entered need to be three
+# Anything more or less will generate an error, especially, the string part
+# This approach accepts multiple inputs at the same time
+x, y, z = input("Enter three values: ").split()
+x = int(x)
+y = float(y)
+z = str(z)
+print(i + x)
+print(d + y)
+print(s + " " + z)
+# print(s, z)
+
+# The first can be packed into a function as well
