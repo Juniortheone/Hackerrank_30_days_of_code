@@ -1,0 +1,24 @@
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    N = int(input())
+    if N == 0: # I added this as a check in case 0 is entered
+        print("Enter a new number ")
+    elif N%2 == 1: # checks for odd number
+        print("Weird")
+    elif N%2 == 0: # checks for even number
+        # In case you are wondering why the ending ranges are 6 & 21
+        # the question said "inclusive"
+        # please, read on Python range
+        if N in range(2,6):
+            print("Not Weird")
+        elif N in range(6,21):
+            print("Weird")
+        else:
+            print("Not Weird")
