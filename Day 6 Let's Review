@@ -1,0 +1,25 @@
+# I decided to use a function
+# it works straightforward as well
+# if you aren't comfortable with functions
+def review(s):
+    """Slice the entered values
+    s[0::2] slices from index position 0 to the end, incrementing the index by 2,
+    hence, resulting in even indices
+    s[1::2] does the opposite of the above.
+    slices from index position 1 to the end, incrementing the index by 2,
+    hence, producing odd indices
+    the question asked for '2 space separated strings'
+    the first (,) introduces a space plus the extra space by sep
+    """
+    print(s[0::2], s[1::2], sep=" ")
+
+
+if __name__ == "__main__":
+    try:                 # added in case a user enters anything, but an integer
+        t = int(input())
+    except ValueError:
+        print("Please, enter a valid number")
+    else:
+        for ele in range(0, t):
+            s = input()
+            review(s)
