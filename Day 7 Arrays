@@ -1,0 +1,20 @@
+# Note: Python does not have in-built arrays
+# Lists are usually used as arrays in Python
+# However, if you insist, you can use libraries eg numpy
+"""I will start with simple solutions"""
+
+## Case_1 ##
+n = int(input())
+arr = [1, 2, 3, 4] # assuming this is the list of entered numbers
+new = arr[::-1]    # reverse arr and save it as a new list
+for ss in new:     # use a for loop to print each element in new
+     print(ss, end=" ")
+     
+## Case_2 ##
+# Use the same scenario in Case_1 via a list comprehension
+new = [print(ss, end=" ") for ss in arr[::-1]]
+
+## Case_3 ##
+# Use the reversed method with
+# Unpacking - this is very important
+print(*reversed(arr)) # * is used for unpacking
