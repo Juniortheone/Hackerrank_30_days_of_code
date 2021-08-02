@@ -1,0 +1,21 @@
+flag = True # I prefer to use flags when using a while loop
+n = int(input())
+
+# 1. Accepts the input for the given range
+# 2. Lower converts the input to lower characters
+# 3. Splits into name and phone number
+# 4. Puts everything into a dictionary  using the dict() method
+names = dict(input().lower().split() for _ in range(n))
+
+while flag:  # This also means while True
+    try:
+        name = input()
+        if name in names:
+            print(name + "=" + names[name])
+        else:
+            print("Not found")
+    except EOFError:
+        flag = False # This is an advantage of using flags instead
+                     # of just using while True.
+
+   
