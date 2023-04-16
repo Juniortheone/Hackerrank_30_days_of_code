@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    remainder_list = []
+    # this part is for converting to binary
+    while n > 0:
+        remainder = n % 2
+        n = n // 2
+        remainder_list.append(remainder)
+    # reverse the order of the remainder
+    new_list = remainder_list[::-1]
+    
+    # this is the second part for counting the number of 1's
+    count = 0
+    consecutive_ones = []
+    for each in new_list:
+        if each == 1:
+            count += 1
+        else:
+            count = 0
+        consecutive_ones.append(count)
+    print(max(consecutive_ones))
+        
