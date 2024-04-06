@@ -39,7 +39,7 @@ class Student(Person):
             a = "P"
         elif 40 <= a < 55:
             a = "D"
-        elif 40 < a:
+        else:
             a = "T"
     #   Return: A character denoting the grade.
         return a
