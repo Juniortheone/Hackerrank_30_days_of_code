@@ -28,7 +28,7 @@ class Student(Person):
     #   Function Name: calculate
     def calculate(self):
         # calculates the average of the scores and assigns a grade
-        a = sum(scores)/2
+        a = sum(scores)/len(scores)
         if 90 <= a <= 100:
             a = "O"
         elif 80 <= a < 90:
